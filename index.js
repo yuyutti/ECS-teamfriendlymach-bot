@@ -77,4 +77,11 @@ async function setRoll(){
     }
 }
 
+process.on('uncaughtException', async(error) => {
+    console.error('Uncaught Exception:', error);
+});
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('Unhandled Rejection:', reason);
+});
+
 client.login(token);
