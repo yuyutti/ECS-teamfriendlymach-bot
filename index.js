@@ -8,7 +8,7 @@ const client = new Client({
 });
 require('dotenv').config();
 
-const token = process.env.token;
+const token = process.env.TOKEN;
 
 const A = process.env.Ateam
 const B = process.env.Bteam
