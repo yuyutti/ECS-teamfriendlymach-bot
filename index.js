@@ -16,7 +16,7 @@ const C = process.env.Cteam
 const D = process.env.Dteam
 const E = process.env.Eteam
 const F = process.env.Fteam
-const rolls = [ A, B, C, D, E, F ]
+const rolls = [ A, B, C ]
 let set = 0
 
 client.on('messageCreate', async message => {
@@ -68,12 +68,9 @@ async function setRoll(){
     set++
     if(set === 1) return A
     if(set === 2) return B
-    if(set === 3) return C
-    if(set === 4) return D
-    if(set === 5) return E
-    if(set === 6){
+    if(set === 3) {
         set = 0
-        return F
+        return C
     }
 }
 
